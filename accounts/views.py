@@ -81,7 +81,7 @@ class AuthCreateNewUserView(APIView):
             try:
                 user_email = email
                 display_name = first_name.capitalize()
-                generate_custom_email_from_firebase(user_email, display_name)
+                generate_custom_email_from_firebase.delay(user_email, display_name)
             except Exception:
                 # delete user from firebase if email verification link could not be sent
                 firebase_admin_auth.delete_user(uid)
@@ -435,7 +435,7 @@ class UserPasswordResetView(APIView):
             try:
                 user_email = email
                 display_name = first_name.capitalize()
-                generate_custom_password_link_from_firebase(user_email, display_name)
+                generate_custom_password_link_from_firebase.delay(user_email, display_name)
                 response = {
                     "status": "success",
                     "message": "Password reset link sent successfully.",

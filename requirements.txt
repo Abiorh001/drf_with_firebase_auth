@@ -6,3 +6,5 @@ firebase-admin
 django-cors-headers
 whitenoise
 drf-yasg
+celery
+redis
