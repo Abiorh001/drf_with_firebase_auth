@@ -1,0 +1,6 @@
+python-decouple
+pyrebase4
+firebase-admin
+django-cors-headers
+whitenoise
+drf-yasg
