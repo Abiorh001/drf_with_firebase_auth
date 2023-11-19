@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'drf_with_firebase.urls'
+ROOT_URLCONF = 'drf_with_firebase_auth.urls'
 
 TEMPLATES = [
     {
@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'drf_with_firebase.wsgi.application'
+WSGI_APPLICATION = 'drf_with_firebase_auth.wsgi.application'
 
 
 # Database

@@ -13,7 +13,7 @@ from .utils.custom_email_verification_link import generate_custom_email_from_fir
 from .utils.custom_password_reset_link import generate_custom_password_link_from_firebase
 from django.contrib.auth.hashers import check_password
 import re
-from drf_with_firebase.settings import auth
+from drf_with_firebase_auth.settings import auth
 
 
 class AuthCreateNewUserView(APIView):
